@@ -58,11 +58,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="120" id="0QO-Sc-Q2l" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="150" id="0QO-Sc-Q2l" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0QO-Sc-Q2l" id="OMq-go-FZY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VAJ-aQ-o8t">
@@ -72,27 +72,47 @@
                                                 <constraint firstAttribute="height" constant="65" id="ywk-Ok-G0u"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dex-ep-mdV">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dex-ep-mdV" userLabel="Tweet Name Label">
                                             <rect key="frame" x="89" y="11" width="82" height="22"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMJ-Wy-1kx">
-                                            <rect key="frame" x="89" y="37" width="270" height="72"/>
+                                            <rect key="frame" x="89" y="37" width="270" height="52"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra9-8x-Imv" userLabel="favButton">
+                                            <rect key="frame" x="319" y="99" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="KNu-fN-YrB"/>
+                                                <constraint firstAttribute="width" constant="30" id="xFe-p6-fkL"/>
+                                            </constraints>
+                                            <state key="normal" image="favor-icon"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwe-1h-29x" userLabel="retweetButton">
+                                            <rect key="frame" x="279" y="99" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="PDQ-Vx-Bkq"/>
+                                                <constraint firstAttribute="width" constant="30" id="jjF-KM-KvZ"/>
+                                            </constraints>
+                                            <state key="normal" image="retweet-icon"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Dex-ep-mdV" firstAttribute="leading" secondItem="VAJ-aQ-o8t" secondAttribute="trailing" constant="8" id="1ac-bh-fHJ"/>
                                         <constraint firstItem="VAJ-aQ-o8t" firstAttribute="top" secondItem="OMq-go-FZY" secondAttribute="topMargin" id="9IX-li-cbb"/>
                                         <constraint firstItem="VAJ-aQ-o8t" firstAttribute="leading" secondItem="OMq-go-FZY" secondAttribute="leadingMargin" id="A6D-Az-Jfp"/>
                                         <constraint firstItem="Dex-ep-mdV" firstAttribute="top" secondItem="OMq-go-FZY" secondAttribute="topMargin" id="BRu-PP-WnW"/>
+                                        <constraint firstItem="Ra9-8x-Imv" firstAttribute="top" secondItem="DMJ-Wy-1kx" secondAttribute="bottom" constant="10" id="ByB-mc-J7L"/>
                                         <constraint firstItem="DMJ-Wy-1kx" firstAttribute="trailing" secondItem="OMq-go-FZY" secondAttribute="trailingMargin" id="MsF-vu-8oT"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ra9-8x-Imv" secondAttribute="bottom" constant="10" id="Q1X-fU-c5c"/>
                                         <constraint firstItem="DMJ-Wy-1kx" firstAttribute="leading" secondItem="VAJ-aQ-o8t" secondAttribute="trailing" constant="8" id="Tsf-R7-7xH"/>
-                                        <constraint firstItem="DMJ-Wy-1kx" firstAttribute="bottom" secondItem="OMq-go-FZY" secondAttribute="bottomMargin" id="Zla-DT-1Ex"/>
+                                        <constraint firstItem="Ra9-8x-Imv" firstAttribute="leading" secondItem="Iwe-1h-29x" secondAttribute="trailing" constant="10" id="bEJ-Mj-XK8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Iwe-1h-29x" secondAttribute="bottom" constant="10" id="dJO-KJ-mI0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ra9-8x-Imv" secondAttribute="trailing" constant="10" id="vxb-tm-crx"/>
                                         <constraint firstItem="DMJ-Wy-1kx" firstAttribute="top" secondItem="Dex-ep-mdV" secondAttribute="bottom" constant="4" id="zdc-nu-xDV"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -222,4 +242,8 @@
             <point key="canvasLocation" x="2231" y="-302"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favor-icon" width="30" height="30"/>
+        <image name="retweet-icon" width="30" height="30"/>
+    </resources>
 </document>
