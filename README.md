@@ -23,9 +23,10 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/fE3YF5d7Jf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/tju9eX5hdd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 Tweeter is a basic twitter app to read your tweets.
-Time spent: 2 hours spent in total
+Time spent: 3 hours spent in total
 
 # Project 3 - Tweeter
 
